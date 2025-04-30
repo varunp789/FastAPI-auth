@@ -19,3 +19,9 @@ app = FastAPI(
 # Include routers
 app.include_router(auth.router, prefix=f"{settings.API_V1_STR}/auth", tags=["auth"])
 app.include_router(admin.router, prefix=f"{settings.API_V1_STR}/admin", tags=["admin"]) 
+
+
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
