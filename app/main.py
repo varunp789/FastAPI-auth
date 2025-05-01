@@ -23,5 +23,5 @@ app.include_router(admin.router, prefix=f"{settings.API_V1_STR}/admin", tags=["a
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Welcome to the FastAPI application!"}
 
